@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="col-md-12">
+    <div class="panel panel-primary">
+      <div class="panel-heading">Liste des départements</div>
+      <div class="panel-body">
+        <table class="table table-bordered table-striped">
+          <thead>
+          <tr>
+            <th>N°</th><th>Région</th><th>Code ANSD</th><th>Département</th>
+            <th>Date de création</th><th>Chef lieu</th><th>Option</th>
+          </tr>
+          </thead>
+          <tbody *ngIf="listedepartements">
+          <tr *ngFor="let d of listedepartements">
+            <td>{{d.id}}</td>
+            <td>{{d.region_id}}</td>
+            <td>{{d.code_ansd}}</td>
+            <td>{{d.nom_departement}}</td>
+            <td>{{d.date_creation}}</td>
+            <td>{{d.chef_lieu}}</td>
+            <td>
+              <a class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span></a> &nbsp;
+              <a class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
